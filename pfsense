@@ -1,0 +1,31 @@
+
+
+
+
+
+
+Recommended Storage Sizes for pfSense
+
+The storage requirements for pfSense depend on the deployment type and features enabled (such as logging, packages, and caching).
+💾 Minimum Storage Requirements
+
+    Bare Minimum: 4 GB (for basic firewall setup)
+    Recommended Minimum: 8 GB (for standard installations)
+
+📊 Recommended Storage by Use Case
+Use Case	Recommended Storage	Notes
+Basic Firewall (Home/Small Office)	8-16 GB	Ideal for simple routing, DHCP, and NAT with minimal logs.
+Business/Enterprise with Logging	32-64 GB	Required for logging, VPNs, Suricata, and additional packages.
+High Logging & Packages (Snort, Squid, pfBlockerNG, etc.)	128 GB+	Large log retention, caching, and package-heavy setups.
+Enterprise or Multi-WAN with IDS/IPS	256 GB+ (SSD Recommended)	Handles Suricata/Snort logs, VPN tunnels, and complex rules.
+🖥️ Storage Type Recommendations
+
+    SSD (Recommended): Faster performance, better reliability for logs and caching.
+    HDD (If necessary): Acceptable for low-end deployments with minimal logging.
+    mSATA/CompactFlash: Suitable for embedded devices with basic firewall functions.
+
+🔥 Key Factors Affecting Storage Usage
+
+    Logging & Reporting: Large logs from Suricata/Snort can quickly consume storage.
+    VPN & Traffic Caching: Squid Proxy, pfBlockerNG, and VPN logs increase disk usage.
+    Package Installations: Extra software like Snort, Suricata, and Zabbix Agent require more space.
