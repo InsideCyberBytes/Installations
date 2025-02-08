@@ -1,0 +1,55 @@
+Step 1: Setting Up Ubuntu on VMware
+1.1 Download Ubuntu ISO
+
+    Open browser, go to Ubuntu official website https://ubuntu.com/download/alternative-downloads
+    Download the REMnux version 20.04
+
+1.2 Create a New Virtual Machine in VMware
+
+Open VMware Workstation / VMware Fusion / ESXi
+
+    Select “Create a New Virtual Machine”
+    Choose Ubuntu 64-bit
+    Allocate 4GB+ RAM, 2+ CPUs 
+    Assign at least 40GB disk space (preferably 60GB)
+    Enable bridged networking (for internet access)
+    Mount the Ubuntu ISO
+
+1.3 Install Ubuntu
+
+Boot the VM and start Ubuntu installation
+
+    Select “Minimal Installation”
+    Enable “Download updates while installing Ubuntu”
+    Choose Erase disk and install Ubuntu (for a clean setup)
+    Set up username/password
+    Let the installation complete and restart the VM
+
+Step 2: Installing REMnux
+2.1 Update the System
+
+Open Terminal and run:
+
+sudo apt update && sudo apt upgrade -y
+
+2.2 Download and Install REMnux
+
+Run the following commands:
+
+wget https://remnux.org/remnux-cli  
+chmod +x remnux-cli  
+sudo ./remnux-cli install
+
+This downloads and installs REMnux’s full toolset.
+Installation can take 30-60 minutes, depending on system speed.
+
+Step 3: Verifying REMnux & Taking a Snapshot
+3.1 Verify Installation
+
+Run:
+
+remnux check
+
+remnux update
+
+    Confirms all tools are installed correctly.
