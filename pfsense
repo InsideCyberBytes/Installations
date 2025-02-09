@@ -1,9 +1,3 @@
-
-
-
-
-
-
 Recommended Storage Sizes for pfSense
 
 The storage requirements for pfSense depend on the deployment type and features enabled (such as logging, packages, and caching).
